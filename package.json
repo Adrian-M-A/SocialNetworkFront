@@ -16,6 +16,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "Adrian M.A.",
+  "license": "GNU 3",
   "eslintConfig": {
     "extends": "react-app"
   },
