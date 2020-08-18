@@ -6,6 +6,20 @@
     
     
 }
+#logoTitle{
+    display: flex;
+    justify-content: center;
+}
+
+#logoLanding{
+    height: 7rem;
+}
+
+#titleSubtitle{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
 
 #landingTitle{
     display: flex;

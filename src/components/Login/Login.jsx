@@ -15,15 +15,17 @@ const Login = (props) => {
         login(credentials)
         .then(() => {
             history.push('/public');
-        }, 300)
+        }, 200)
+
         .catch(() => {
             setErrorLogin('Usuario no registrado.')
         })
     }
     const register = () => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             history.push('/register');
-        }, 300);
+        }, 200);
+        return () => clearTimeout(timer);
     };
 
     return (
