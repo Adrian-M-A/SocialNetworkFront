@@ -3,7 +3,7 @@ import API_URL from './api.js';
 
 axios.defaults.baseURL = API_URL;
 
-axios.interceptors.request.use(function(config) {
+ axios.interceptors.request.use(function(config) {
     const token = localStorage.getItem('authToken');
     const newConfig = {
         ...config
@@ -18,3 +18,4 @@ axios.interceptors.request.use(function(config) {
 }, function(error) {
     return Promise.reject(error);
 });
+

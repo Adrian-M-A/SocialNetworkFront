@@ -9,7 +9,7 @@ export const login = async(credentials) => {
         type: LOGIN,
         payload: res.data.user
     });
-    localStorage.setItem('auhtToken', res.data.token);
+    localStorage.setItem('authToken', res.data.token);
     return res;
 }
 
