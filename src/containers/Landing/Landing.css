@@ -1,0 +1,48 @@
+#landingContainer{
+    display:flex;
+    height: 58.8rem;
+    justify-content: center;
+    flex-direction: column ;
+    
+    
+}
+#logoTitle{
+    display: flex;
+    justify-content: center;
+}
+
+#logoLanding{
+    height: 7rem;
+}
+
+#titleSubtitle{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#landingTitle{
+    display: flex;
+    align-self: center;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#landingSubtitle{
+    color: rgb(192, 190, 190);
+    margin-top: -0.5rem;
+}
+
+#mapLanding{
+    display: flex;
+    height: 40rem;
+    width: 76rem;
+    align-self: center;
+    background-image: url('../../img/1.png');
+}
+
+#loginMaps{
+    display: flex;
+    flex-direction: row;
+}
