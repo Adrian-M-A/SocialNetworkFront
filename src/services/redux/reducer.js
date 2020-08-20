@@ -1,9 +1,9 @@
-import {
-LOGIN
-} from './types/users.js'
+import { LOGIN } from './types/users.js'
+import { GET_PUBLIC_MESSAGES } from './types/messages.js';
 
 const initialState = {
-    user: {}
+    user: {},
+    publicMessages: []
 }
 
 function reducer(state = initialState, action){
@@ -12,6 +12,11 @@ function reducer(state = initialState, action){
             return {
                 ...state,
                 user:action.payload
+            }
+        case GET_PUBLIC_MESSAGES:
+            return {
+                ...state,
+                publicMessages:action.payload
             }
         default:
             return state;

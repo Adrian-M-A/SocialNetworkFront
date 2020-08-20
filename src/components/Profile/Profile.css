@@ -24,13 +24,14 @@
     border: 0.1rem solid gray;
     height: 13rem;
     width: 13rem;
+    overflow: hidden;
     border-radius: 15rem;
     justify-content: center;
 }
 
 #profileImg{
-    height: 9rem;
-    align-self: center;
+    height: 18rem;
+    align-self: flex-start;
 }
 
 #userData{

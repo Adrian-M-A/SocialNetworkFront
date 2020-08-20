@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
-import API_URL from "../../config/api";
 import { useHistory } from 'react-router-dom';
+import { logout } from '../../services/redux/actions';
 
 import './Profile.css';
 
@@ -10,18 +9,12 @@ const Profile = props =>{
     
     let history = useHistory();
 
-    const logout = () => {
-        
-        const token = localStorage.getItem('authToken');
-        const headers = {
-            token
+    const userLogout = () => {
+        const userId ={
+            _id: props.user._id
         }
-
-        axios.get(API_URL + 'users/logout', {
-            headers : headers
-        })
-        .then(res => {
-            localStorage.removeItem('authToken');
+        logout(userId)
+        .then(() => {
             history.push('/');
         })
         .catch(error => {
@@ -43,7 +36,7 @@ const Profile = props =>{
                     <div id="professionProfile"> Profesión: {props.user?.profession} </div>
                     <div id="cityProfile"> Ciudad: {props.user?.city} </div>
                 </div>
-                <button id="logoutButton" onClick={logout}>Salir</button>
+                <button id="logoutButton" onClick={userLogout}>Salir</button>
             </div>
         </div>
         
