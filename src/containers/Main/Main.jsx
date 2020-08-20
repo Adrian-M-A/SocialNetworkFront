@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Profile from '../../components/Profile/Profile.jsx';
 import MessagesWindow from '../../components/MessagesWindow/MessagesWindow.jsx';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+// import { useEffect } from 'react';
 
 import './Main.css';
 
@@ -9,12 +10,13 @@ import './Main.css';
 
 const Main = props => {
 
-    // let history = useHistory();
 
-    // if(localStorage.getItem('auhtToken') == null){    
-    //         return (history.push('/'));
+    // useEffect(() =>{
+    //     if(!localStorage.getItem('auhtToken')){    
+            
     //     }
-    
+    //     console.log("montado")
+    // },[])
 
     return (
         <div id="publicContainer">

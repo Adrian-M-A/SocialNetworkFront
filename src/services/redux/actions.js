@@ -2,7 +2,7 @@ import axios from 'axios';
 import store from './store.js';
 import backURL from '../../config/api.js';
 import { LOGIN } from './types/users.js';
-import { GET_PUBLIC_MESSAGES } from './types/messages.js';
+import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 export const login = async(credentials) => {
     const res = await axios.post(backURL + 'users/login', credentials);
@@ -38,4 +38,30 @@ export const getAllMessages = async() => {
         payload: res.data
     })
     return res;
+}
+
+export const searchedMessages = async(searchInput) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'messages/search/' + searchInput, {
+        headers: {
+            'authorization': token
+        },
+        id:token
+    });
+    store.dispatch({
+        type: SEARCHED_MESSAGES,
+        payload: res.data
+    })
+    return res;
+}
+
+export const writeMessage = async(body) => {
+    const token = localStorage.getItem('authToken');
+    await axios.post(backURL + 'messages/new', body, {
+        headers: {
+            'authorization': token
+        },
+        id:token
+    });
+    
 }

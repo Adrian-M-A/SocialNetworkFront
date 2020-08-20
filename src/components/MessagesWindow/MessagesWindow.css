@@ -17,7 +17,7 @@
     width: 100%;
     margin-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 0.1rem solid gray;
+    border-bottom: 0.1rem solid #fe83af;
 }
 
 #labelMessages{
@@ -29,8 +29,11 @@
     align-self: center;
     color:#661fdf;
 }
+#searchForm {
+    display: flex;
+}
 
-#searchInputMessages{
+#searchInputMessages, #writeMessageTitle{
     display: flex;
     margin-right: 1rem;
     border: 0.2rem solid #661fdf;
@@ -63,5 +66,48 @@
 #messagesContent{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    height: 45rem;
+}
+
+#writeMessage {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    border-top: 0.1rem solid #7deeff;
+}
+
+#writeMessageTitle, #writeMessageBody{
+    display: flex;
+    height: 3rem;
+    width: 30rem;
+    margin-left: 1rem;
+    align-self: center;
+    border: 0.2rem solid #661fdf;
+    border-radius: 0.2rem;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#writeMessagesButton {
+    border: none;
+    background-color: #661fdf;
+    border-radius: 0.5rem;
+    height: 3rem;
+    align-self: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #ffb6d0;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#writeMessagesButton:hover{
+    color: #fe83af;
 }

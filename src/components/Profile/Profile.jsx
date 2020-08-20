@@ -33,8 +33,8 @@ const Profile = props =>{
                 </div>
                 <div id="userData">
                     <div id="salutationProfile"> Bienvenido/a {props.user?.name} {props.user?.surnames}  </div>
-                    <div id="professionProfile"> Profesión: {props.user?.profession} </div>
-                    <div id="cityProfile"> Ciudad: {props.user?.city} </div>
+                    <div id="professionProfile"> {props.user?.profession} </div>
+                    <div id="cityProfile"> de {props.user?.city} </div>
                 </div>
                 <button id="logoutButton" onClick={userLogout}>Salir</button>
             </div>
