@@ -80,3 +80,18 @@ export const newFriends = async(country) => {
     })
     return res;
 }
+
+export const searchedUsers = async(tag) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'users/search/' + tag, {
+        headers: {
+            'authorization': token
+        },
+        id:token
+    });
+    store.dispatch({
+        type: NEW_FRIENDS,
+        payload: res.data
+    })
+    return res;
+}

@@ -21,8 +21,11 @@ const MessagesWindow = props => {
 
     const searchMessages = (event) => {
         event.preventDefault();
-        const searchinput =  event.target.searchMessage.value;
-        searchedMessages(searchinput);
+        const searchInput =  event.target.searchMessage.value;
+        if(!searchInput){
+            return;
+        }
+        searchedMessages(searchInput);
         setPublicWindow(false);
         setSearchWindow(true);
     }

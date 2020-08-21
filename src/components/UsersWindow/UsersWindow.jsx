@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './UsersWindow.css';
 
-import { newFriends } from '../../services/redux/actions.js';
+import { newFriends, searchedUsers } from '../../services/redux/actions.js';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Friend from '../Friend/Friend.jsx';
@@ -11,6 +11,7 @@ const UsersWindow = props => {
 
     let history = useHistory();
     const [friendsWindow, setFriendsWindow] = useState(true);
+    const [searchedFriendsWindow, setSearchedFriendsWindow] = useState(false);
 
     const goToMessages = () => {
         history.push('/public')
@@ -22,8 +23,15 @@ const UsersWindow = props => {
         newFriends(country);
     }
 
-    const searchMessages = () => {
-
+    const searchUsers = (event) => {
+        event.preventDefault();
+        const searchInput =  event.target.searchUsers.value;
+        if(!searchInput){
+            return;
+        }
+        searchedUsers(searchInput);
+        setFriendsWindow(false);
+        setSearchedFriendsWindow(true);
     }
 
     const filterByUser = (user) => {
@@ -38,14 +46,14 @@ const UsersWindow = props => {
              <div id="header">
                 <button id="buttonLastMessages" onClick={goToMessages}>Mensajes</button>
                 <button id="friendsButton" type="submit" onClick={getNewFriends}>Amigos:</button>
-                <form id="searchForm" onSubmit={searchMessages}>
+                <form id="searchForm" onSubmit={searchUsers}>
                     <input id="searchInputUsers" type="text" name="searchUsers" placeholder="Buscar amigos nuevos..."/>
                     <button id="searchButtonUsers" type="submit">Buscar</button>
                 </form>
             </div>
             <div id="messagesContent">
             {friendsWindow && props.newFriends?.filter(filterByUser).map(friend => <Friend key={friend._id} friend={friend} />)}
-            {/* {searchWindow && props.messages?.map(message => <Message key={message._id} message={message} />)} */}
+            {searchedFriendsWindow && props.newFriends?.filter(filterByUser).map(friend => <Friend key={friend._id} friend={friend} />)}
             </div>
         </div>
     )
