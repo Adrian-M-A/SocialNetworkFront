@@ -1,19 +1,19 @@
 import React from 'react';
 import Profile from '../../components/Profile/Profile.jsx';
 
-import './Main.css';
+import './Friends.css';
 
-import MessagesWindow from '../../components/MessagesWindow/MessagesWindow.jsx';
+import UsersWindow from '../../components/UsersWindow/UsersWindow.jsx';
 
 
-const Main = props => {
+const Friends = props => {
 
     return (
         <div id="publicContainer">
             {localStorage.getItem('authToken') && <Profile />}
-            {localStorage.getItem('authToken') && <MessagesWindow />}
+            {localStorage.getItem('authToken') && <UsersWindow />}
         </div>
     )
 }
 
-export default Main;
+export default Friends;

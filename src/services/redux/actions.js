@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from './store.js';
 import backURL from '../../config/api.js';
-import { LOGIN } from './types/users.js';
+import { LOGIN, NEW_FRIENDS } from './types/users.js';
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 export const login = async(credentials) => {
@@ -64,4 +64,19 @@ export const writeMessage = async(body) => {
         id:token
     });
     
+}
+
+export const newFriends = async(country) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'users/newfriends/' + country, {
+        headers: {
+            'authorization': token
+        },
+        id:token
+    });
+    store.dispatch({
+        type: NEW_FRIENDS,
+        payload: res.data
+    })
+    return res;
 }

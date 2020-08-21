@@ -1,12 +1,15 @@
 import React, {useEffect, useState } from 'react';
-import { getAllMessages, searchedMessages, writeMessage } from '../../services/redux/actions.js';
+import { getAllMessages, searchedMessages, writeMessage, newFriends } from '../../services/redux/actions.js';
 import { connect } from 'react-redux';
 
 import './MessagesWindow.css';
 
 import Message from '../Message/Message.jsx';
+import { useHistory } from 'react-router-dom';
 
 const MessagesWindow = props => {
+    
+    let history = useHistory();
     
     useEffect(() => {
         getAllMessages();
@@ -29,6 +32,11 @@ const MessagesWindow = props => {
         setSearchWindow(false);
         setPublicWindow(true);
     }
+    
+    const goToFriends = () => {
+        history.push('/friends');
+        newFriends(props.user?.country);
+    }
 
     const newMessage = (event) => {
         event.preventDefault();
@@ -49,12 +57,12 @@ const MessagesWindow = props => {
     return(
         <div id="messagesWindow">
             <div id="header">
-                <label id="labelMessages">Mensajes:</label>
+                <button id="friendsButton" type="submit" onClick={goToFriends}>Amigos</button>
+                <button id="buttonLastMessages" onClick={allMessages}>Mensajes:</button>
                 <form id="searchForm" onSubmit={searchMessages}>
                     <input id="searchInputMessages" type="text" name="searchMessage" placeholder="Buscar mensaje..."/>
                     <button id="searchButtonMessages" type="submit">Buscar</button>
                 </form>
-                <button id="searchButtonMessages" onClick={allMessages}>Todos</button>
             </div>
             <div id="messagesContent">
             {publicWindow && props.messages?.map(message => <Message key={message._id} message={message} />)}
