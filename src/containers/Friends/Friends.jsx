@@ -3,7 +3,7 @@ import Profile from '../../components/Profile/Profile.jsx';
 
 import './Friends.css';
 
-import UsersWindow from '../../components/UsersWindow/UsersWindow.jsx';
+import RecFriendsWindow from '../../components/RecFriendsWindow/RecFriendsWindow.jsx';
 
 
 const Friends = props => {
@@ -11,7 +11,7 @@ const Friends = props => {
     return (
         <div id="publicContainer">
             {localStorage.getItem('authToken') && <Profile />}
-            {localStorage.getItem('authToken') && <UsersWindow />}
+            {localStorage.getItem('authToken') && <RecFriendsWindow />}
         </div>
     )
 }

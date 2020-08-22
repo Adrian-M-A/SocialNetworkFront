@@ -86,12 +86,50 @@ export const searchedUsers = async(tag) => {
     const res = await axios.get(backURL + 'users/search/' + tag, {
         headers: {
             'authorization': token
-        },
-        id:token
+        }
     });
     store.dispatch({
         type: NEW_FRIENDS,
         payload: res.data
     })
     return res;
+}
+
+export const friendshipRequest = async(body) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.post(backURL + 'users/friendshiprequest' , body, {
+        headers: {
+            'authorization': token
+        }
+    });
+    store.dispatch({
+        type: NEW_FRIENDS,
+        payload: res.data
+    })
+}
+
+export const friendsByAge = async(minAge, maxAge) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'users/age/' + minAge + '/' + maxAge, {
+        headers: {
+            'authorization': token
+        }
+    });
+    store.dispatch({
+        type: NEW_FRIENDS,
+        payload: res.data
+    })
+}
+
+export const friendsByAgeDesc = async(minAge, maxAge) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'users/age/' + minAge + '/' + maxAge, {
+        headers: {
+            'authorization': token
+        }
+    });
+    store.dispatch({
+        type: NEW_FRIENDS,
+        payload: res.data
+    })
 }

@@ -10,14 +10,19 @@
     margin-top: 1rem; 
 }
 
-#header {
+#headerMessages {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 3rem;
     width: 100%;
     margin-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 0.1rem solid #fe83af;
+}
+
+#headerMessagesLeft {
+    display: flex;
+    margin-left: 2rem;
 }
 
 #searchForm {

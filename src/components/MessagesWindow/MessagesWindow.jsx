@@ -59,9 +59,11 @@ const MessagesWindow = props => {
 
     return(
         <div id="messagesWindow">
-            <div id="header">
-                <button id="friendsButton" type="submit" onClick={goToFriends}>Amigos</button>
-                <button id="buttonLastMessages" onClick={allMessages}>Mensajes:</button>
+            <div id="headerMessages">
+                <div id="headerMessagesLeft">
+                    <button id="friendsButton" type="submit" onClick={goToFriends}>Amigos</button>
+                    <button id="buttonLastMessages" onClick={allMessages}>Mensajes</button>
+                </div>
                 <form id="searchForm" onSubmit={searchMessages}>
                     <input id="searchInputMessages" type="text" name="searchMessage" placeholder="Buscar mensaje..."/>
                     <button id="searchButtonMessages" type="submit">Buscar</button>
