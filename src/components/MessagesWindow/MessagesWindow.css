@@ -85,6 +85,7 @@
     flex-direction: row;
     justify-content: center;
     height: 45rem;
+    overflow: scroll;
 }
 
 #writeMessage {

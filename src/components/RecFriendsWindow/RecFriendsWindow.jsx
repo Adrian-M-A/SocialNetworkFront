@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './RecFriendsWindow.css';
 
-import { newFriends, searchedUsers, friendsByAge, friendsByAgeDesc } from '../../services/redux/actions.js';
+import { newFriends, searchedUsers, friendsByAge } from '../../services/redux/actions.js';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Friend from '../Friend/Friend.jsx';

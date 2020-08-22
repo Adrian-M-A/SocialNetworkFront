@@ -120,16 +120,3 @@ export const friendsByAge = async(minAge, maxAge) => {
         payload: res.data
     })
 }
-
-export const friendsByAgeDesc = async(minAge, maxAge) => {
-    const token = localStorage.getItem('authToken');
-    const res = await axios.get(backURL + 'users/age/' + minAge + '/' + maxAge, {
-        headers: {
-            'authorization': token
-        }
-    });
-    store.dispatch({
-        type: NEW_FRIENDS,
-        payload: res.data
-    })
-}
