@@ -1,0 +1,63 @@
+#profileWindow{
+    display: flex;
+    height: 25rem;
+    width: 20.7rem;
+    background-color: white;
+    margin-top: 10rem;
+    margin-left: 1rem;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+}
+
+#userImg{
+    display: flex;
+    height: 10rem;
+    width: 22rem;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+
+#imageBorder{
+    display:flex;
+    border: 0.1rem solid gray;
+    height: 13rem;
+    width: 13rem;
+    overflow: hidden;
+    border-radius: 15rem;
+    justify-content: center;
+}
+
+#profileImg{
+    height: 18rem;
+    align-self: flex-start;
+}
+
+#userData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+#salutationProfile, #professionProfile{
+    margin-bottom: 0.5rem;
+}
+
+#logoutButton{
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #9d78dd;
+    height: 3rem;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 0.5rem;
+    transition: all ease 0.2s;
+}
+
+#logoutButton:hover{
+    color: #661fdf;
+}

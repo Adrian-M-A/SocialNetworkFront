@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  scrollbar-width: auto;          
+  scrollbar-color: #f1c8d6 white;
 }
 
 .App-logo {
@@ -36,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+

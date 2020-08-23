@@ -34,7 +34,7 @@ const Login = (props) => {
                 <div id="loginData">
                     <form id="loginForm" onSubmit={onSubmit}>
                             <label id="emailLabel">Email</label>
-                            <input type="email" name="email" id="loginEmailInput" placeholder="Introduce tu email"/>
+                            <input type="email" name="email" id="loginEmailInput" autoFocus placeholder="Introduce tu email"/>
                             <label id="passwordLabel">Password</label>
                             <input type="password" name="password" id="loginPasswordInput" placeholder="Introduce tu contraseña" />
                             <button id="loginButton" type="submit">Entrar</button>

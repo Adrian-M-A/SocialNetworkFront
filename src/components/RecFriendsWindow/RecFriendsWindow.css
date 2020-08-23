@@ -1,0 +1,139 @@
+#friendsWindow {
+    display: flex;
+    flex-direction: column;
+    height: 57rem; 
+    width: 75.5em;
+    background-color: white;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    margin-top: 1rem; 
+}
+
+#headerFriends {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #fe83af;
+}
+
+#headerFriendsLeft {
+    margin-left: 2rem;
+}
+
+#labelFriends{
+    display: flex;
+    align-self: center;
+    margin-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    color:#661fdf;
+}
+#searchForm {
+    display: flex;
+}
+
+#buttonLastMessages, #friendsButton {
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #661fdf;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#buttonLastMessages:hover, #friendsButton:hover {
+    color: #09d8f8;
+}
+
+#searchInputUsers{
+    display: flex;
+    margin-right: 1rem;
+    border: 0.2rem solid #661fdf;
+    border-radius: 0.2rem;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#searchButtonUsers{
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 3rem;
+    align-self: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #a181d8;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#searchButtonUsers:hover{
+    color: #09d8f8;
+}
+
+#formAndButtonsRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#minAge, #maxAge {
+    width: 7rem;
+    margin-right: 1rem;
+    border: 0.2rem solid #661fdf;
+    border-radius: 0.2rem;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#searchAgeButton, #descendingAgeButton {
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #661fdf;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#searchAgeButton:hover, #descendingAgeButton:hover {
+    color: #09d8f8;
+}
+
+#recommendedFriends {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#friendsComponents {
+    display: flex;
+    height: 41rem;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
