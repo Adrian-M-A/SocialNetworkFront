@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { logout } from '../../services/redux/actions';
 
-import './Profile.css';
+import './UserWindow.css';
 
-const Profile = props =>{
+const UserWindow = props =>{
     
     let history = useHistory();
 
@@ -45,4 +45,4 @@ const Profile = props =>{
 }
 
 const mapStateToProps = ({user}) => ({user: user});
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps)(UserWindow);

@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../../components/Profile/Profile.jsx';
+import UserWindow from '../../components/UserWindow/UserWindow.jsx';
 
 import './Friends.css';
 
@@ -10,7 +10,7 @@ const Friends = props => {
 
     return (
         <div id="publicContainer">
-            {localStorage.getItem('authToken') && <Profile />}
+            {localStorage.getItem('authToken') && <UserWindow />}
             {localStorage.getItem('authToken') && <RecFriendsWindow />}
         </div>
     )

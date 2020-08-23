@@ -7,6 +7,7 @@ import './App.css';
 
 import Landing from './containers/Landing/Landing.jsx';
 import Friends from './containers/Friends/Friends.jsx';
+import UserDetail from './containers/UserDetail/UserDetail.jsx';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' component={Landing} exact />
-          <Route path='/public' component={Main} exact />
+          <Route path='/main' component={Main} exact />
           <Route path='/register' component={Register} exact />
           <Route path='/friends' component={Friends} exact />
+          <Route path='/userdetail' component={UserDetail} exact />
         </Switch>
       </Router>
     </div>

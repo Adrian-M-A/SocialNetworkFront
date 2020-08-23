@@ -1,0 +1,43 @@
+#userDetailWindow {
+    display: flex;
+    flex-direction: column;
+    height: 57rem; 
+    width: 75.5em;
+    background-color: white;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    margin-top: 1rem; 
+}
+
+#headerUserDetail {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #fe83af;
+}
+
+#headerUserDetailLeft {
+    margin-left: 2rem;
+}
+
+#buttonLastMessages, #userDetailButton, #buttonUserDetail {
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #661fdf;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#buttonLastMessages:hover, #userDetailButton:hover, #buttonUserDetail:hover {
+    color: #09d8f8;
+}

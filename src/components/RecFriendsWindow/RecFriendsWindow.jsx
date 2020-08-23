@@ -14,14 +14,17 @@ const RecFriendsWindow = props => {
     const [searchedFriendsWindow, setSearchedFriendsWindow] = useState(false);
     const [ageFriendsDescWindow, setAgeFriendsDescWindow] = useState(false);
 
-    const goToMessages = () => {
-        history.push('/public')
-    }
-
     const getNewFriends = () => {
-        
         const country = props.user.country;
         newFriends(country);
+    }
+
+    const goToMessages = () => {
+        history.push('/main')
+    }
+
+    const goToUserDetail = () => {
+        history.push('/userdetail')
     }
 
     const searchUsers = (event) => {
@@ -73,6 +76,7 @@ const RecFriendsWindow = props => {
                 <div id="headerFriendsLeft">
                     <button id="friendsButton" type="submit" onClick={getNewFriends}>Amigos</button>
                     <button id="buttonLastMessages" onClick={goToMessages}>Mensajes</button>
+                    <button id="buttonUserDetail" onClick={goToUserDetail}>Perfil</button>
                 </div>
                 <form id="searchForm" onSubmit={searchUsers}>
                     <input id="searchInputUsers" type="text" name="searchUsers" placeholder="Buscar amigos nuevos..."/>
