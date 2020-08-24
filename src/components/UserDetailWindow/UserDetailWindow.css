@@ -41,3 +41,121 @@
 #buttonLastMessages:hover, #userDetailButton:hover, #buttonUserDetail:hover {
     color: #09d8f8;
 }
+
+#userDetailUp {
+    display: flex;
+}
+
+#userDetailLeft{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+#userDetailImageBorder{
+    display:flex;
+    border: 0.1rem solid gray;
+    height: 13rem;
+    width: 13rem;
+    overflow: hidden;
+    border-radius: 15rem;
+    align-self: center;
+    justify-content: center;
+}
+
+#userDetailImg{
+    height: 18rem;
+    align-self: flex-start;
+}
+
+#nameUserDetail, #surnamesUserDetail{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    
+}
+
+#nameUserDetail{
+    margin-top: 1.5rem;
+}
+
+#surnamesUserDetail{
+    margin-top: 0.7rem;
+}
+
+#userDetailRight{
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+}
+
+#userDetailData{
+    display: flex;
+    width: 10   0%;
+    flex-direction: column;
+    margin-left: 5rem;
+
+}
+
+#userDetailForm {
+    display: flex;
+    text-align: start;
+}
+
+#ageUserDetail {
+    font-weight: bold;
+    margin-top: 2rem;
+    align-self: flex-start;
+    color: #5420af;
+}
+
+#professionUserDetail, #hobbyUserDetail, #imagePathUserDetail,
+#cityUserDetail, #countryUserDetail, #cityUserDetail, #countryUserDetail {
+    font-weight: bold;
+    margin-top: 1rem;
+    align-self: flex-start;
+    color: #5420af;
+}
+
+span{
+    color: rgb(80, 78, 78);
+    margin-left: 1rem;
+}
+
+#professionUserDetailInput, #hobbyUserDetailInput, #imagePathUserDetailInput{
+    margin-left: 2rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #661fdf;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#imagePathUserDetailInput{
+    width: 20rem;
+    overflow: auto;
+}
+
+#userDetailUpdateButton{
+    border: none;
+    background-color: #ffb6d0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #9d78dd;
+    margin-left: 1rem;
+    height: 3rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#userDetailUpdateButton:hover{
+    color: #661fdf;
+}

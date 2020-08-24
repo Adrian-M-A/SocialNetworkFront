@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from './store.js';
 import backURL from '../../config/api.js';
-import { LOGIN, NEW_FRIENDS } from './types/users.js';
+import { LOGIN, NEW_FRIENDS, UPDATE_USER } from './types/users.js';
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 export const login = async(credentials) => {
@@ -117,6 +117,19 @@ export const friendsByAge = async(minAge, maxAge) => {
     });
     store.dispatch({
         type: NEW_FRIENDS,
+        payload: res.data
+    })
+}
+
+export const updateUser = async(id,body) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.put(backURL + 'users/' + id, body, {
+        headers: {
+            'authorization': token
+        }
+    });
+    store.dispatch({
+        type: UPDATE_USER,
         payload: res.data
     })
 }

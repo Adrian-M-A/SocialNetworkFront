@@ -32,7 +32,7 @@ const UserWindow = props =>{
                     </div>
                 </div>
                 <div id="userData">
-                    <div id="salutationProfile"> Bienvenido/a {props.user?.name} {props.user?.surnames}  </div>
+                    <div id="salutationProfile"> Bienvenido/a {props.user?.name} {props.user?.surnames}</div>
                     <div id="professionProfile"> {props.user?.profession} </div>
                     <div id="cityProfile"> de {props.user?.city} </div>
                 </div>
