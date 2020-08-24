@@ -94,9 +94,9 @@
 
 #userDetailData{
     display: flex;
-    width: 10   0%;
+    width: 100%;
     flex-direction: column;
-    margin-left: 5rem;
+    margin-left: 2rem;
 
 }
 
@@ -137,8 +137,15 @@ span{
 }
 
 #imagePathUserDetailInput{
-    width: 20rem;
+    width: 19rem;
     overflow: auto;
+}
+
+#updateAndError{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
 }
 
 #userDetailUpdateButton{
@@ -158,4 +165,18 @@ span{
 
 #userDetailUpdateButton:hover{
     color: #661fdf;
+}
+
+#errorUserDetailUpdate {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: small;
+}
+
+#userDetailDown{
+    display: flex;
+    height: 32rem;
 }

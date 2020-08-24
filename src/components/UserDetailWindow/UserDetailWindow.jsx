@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './UserDetailWindow.css';
 import { useHistory } from 'react-router-dom';
@@ -8,6 +8,8 @@ import { updateUser } from '../../services/redux/actions';
 const UserDetailWindow = props => {
 
     let history = useHistory();
+
+    const [errorUserDetailUpdate, setErrorUserDetailUpdate] = useState('');
 
     const getNewFriends = () => {
         history.push('/friends')
@@ -23,6 +25,16 @@ const UserDetailWindow = props => {
 
     const updateUserData = (event) => {
         event.preventDefault();
+
+        let letterRegex = new RegExp('[0-9]');
+
+        if(event.target.userDetailProfession.value.length > 20 || letterRegex.test(event.target.userDetailProfession.value) ||
+        event.target.userDetailHobbies.value.length > 20 || letterRegex.test(event.target.userDetailHobbies.value)) {
+            setErrorUserDetailUpdate('Con esos datos no se puede actualizar.');
+            return;
+        }
+        
+        
         const body = {
             profession: event.target.userDetailProfession.value || props.user.profession,
             hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
@@ -62,11 +74,14 @@ const UserDetailWindow = props => {
                                     <div id="hobbyUserDetail">Hobby:  
                                         <input id="hobbyUserDetailInput" type="text" name="userDetailHobbies" placeholder={props.user?.hobbies[0]} />
                                     </div>
-                                    <div id="imagePathUserDetail">Imagen de perfil
+                                    <div id="imagePathUserDetail">Imagen de perfil:
                                         <input id="imagePathUserDetailInput" type="text" name="userDetailImagesPath" placeholder="Escribe la dirección de tu imagen" />
                                     </div>
                                 </div>
-                                <button id="userDetailUpdateButton">Modificar datos</button>
+                                <div id="updateAndError">
+                                    <button id="userDetailUpdateButton">Modificar datos</button>
+                                    <span id="errorUserDetailUpdate">{errorUserDetailUpdate}</span>
+                                </div>
                             </form>
                             <div id="cityUserDetail">Ciudad: <span>{props.user?.city}</span></div>
                             <div id="countryUserDetail">País: <span>{props.user?.country}</span></div>
@@ -74,6 +89,12 @@ const UserDetailWindow = props => {
                     </div>
                 </div>
                 <div id="userDetailDown">
+                    <div id="userDetailPendingFriends">
+
+                    </div>
+                    <div id="userDetailFriends">
+                        
+                    </div>
                 </div>
             </div>    
         </div>
