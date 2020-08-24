@@ -160,3 +160,12 @@ export const rejectRequest = async(body) => {
         }
     });
 }
+
+export const cancelFriendship = async(body) => {
+    const token = localStorage.getItem('authToken');
+    await axios.post(backURL + 'users/cancelfriendship', body, {
+        headers: {
+            'authorization': token
+        }
+    });
+}

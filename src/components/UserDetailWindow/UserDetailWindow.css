@@ -44,6 +44,7 @@
 
 #userDetailUp {
     display: flex;
+    height: 25rem;
 }
 
 #userDetailLeft{
@@ -86,6 +87,30 @@
     margin-top: 0.7rem;
 }
 
+#userImages {
+    display: flex;
+    height: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#userDetailSecondImageBorder, #userDetailThirdImageBorder{
+    display:flex;
+    border: 0.1rem solid gray;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    align-self: center;
+    justify-content: center;
+}
+
+#userDetailSecondImg, #userDetailThirdImg{
+    height: 4rem;
+    align-self: flex-start;
+}
+
 #userDetailRight{
     display: flex;
     width: 70%;
@@ -96,8 +121,9 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-top: 2.5rem;
     margin-left: 2rem;
-
+    font-size: larger;
 }
 
 #userDetailForm {
@@ -178,10 +204,23 @@ span{
 
 #userDetailDown{
     display: flex;
-    height: 31rem;
-    margin-top: 1rem;
+    height: 28rem;
 }
 
-#userDetailPendingFriends{
-    width: 50%;
+#userDetailPendingFriends, #userDetailFriends{
+    width: 45%;
+    height: 22rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    font-weight: bold;
+    font-size: larger;
+    color: #5420af;
+}
+
+#listOfPendingFriends, #listOfFriends{
+    display: flex;
+    overflow: scroll;
+    border-top: 0.1rem solid #ffb6d0;
+    height: 22rem;
 }

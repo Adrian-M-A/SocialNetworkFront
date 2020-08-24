@@ -6,6 +6,7 @@ import './UserDetailWindow.css';
 
 import { updateUser } from '../../services/redux/actions';
 import PendingFriend from '../PendingFriend/PendingFriend';
+import RejectFriend from '../RejectFriend/RejectFriend';
 
 const UserDetailWindow = props => {
 
@@ -35,11 +36,14 @@ const UserDetailWindow = props => {
             setErrorUserDetailUpdate('Con esos datos no se puede actualizar.');
             return;
         }
+        if (event.target.userDetailImagesPath.value === ""){
+            return null;
+        }
         
         const body = {
             profession: event.target.userDetailProfession.value || props.user.profession,
             hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
-            imagesPath: event.target.userDetailImagesPath.value || null,
+            imagesPath: event.target.userDetailImagesPath.value,
 
         }
         updateUser(props.user._id, body)
@@ -62,6 +66,14 @@ const UserDetailWindow = props => {
                         </div>
                         <div id="nameUserDetail">{props.user?.name}</div>
                         <div id="surnamesUserDetail">{props.user?.surnames}</div>
+                        <div id="userImages">
+                            <div id="userDetailSecondImageBorder">
+                                <img id="userDetailSecondImg" src={props.user?.imagesPath[1]} alt="Perfil"/>
+                            </div>
+                            <div id="userDetailThirdImageBorder">
+                                <img id="userDetailThirdImg" src={props.user?.imagesPath[2]} alt="Perfil"/>
+                            </div>
+                        </div>
                     </div>
                     <div id="userDetailRight">
                         <div id="userDetailData">
@@ -90,10 +102,14 @@ const UserDetailWindow = props => {
                 </div>
                 <div id="userDetailDown">
                     <div id="userDetailPendingFriends"> Invitaciones:
-                        {props.user?.pendingFriends.map(friend => <PendingFriend key={friend?._id} friend={friend} />)}
+                        <div id="listOfPendingFriends">
+                            {props.user?.pendingFriends.map(friend => <PendingFriend key={friend?._id} friend={friend} />)}
+                        </div>
                     </div>
                     <div id="userDetailFriends"> Amigos:
-                        {props.user?.friends.map(friend => <PendingFriend key={friend?._id} friend={friend} />)}    
+                        <div id="listOfFriends">
+                            {props.user?.friends.map(friend => <RejectFriend key={friend?._id} friend={friend} />)}    
+                        </div>
                     </div>
                 </div>
             </div>    
