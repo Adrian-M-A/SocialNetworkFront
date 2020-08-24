@@ -5,9 +5,9 @@ import './Friend.css';
 import { friendshipRequest } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 
-
 const Friend = (props) => {
-    
+
+
     const friendhsipRequest = () => {
         const body = {
             requester: props.user?._id,

@@ -21,7 +21,7 @@ const MessagesWindow = props => {
 
     const goToFriends = () => {
         history.push('/friends');
-        newFriends(props.user?.country);
+        newFriends(props.user?.country, props.user?._id);
     }
 
     const allMessages = () => {

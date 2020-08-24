@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-
-import './UserDetailWindow.css';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import './UserDetailWindow.css';
+
 import { updateUser } from '../../services/redux/actions';
+import PendingFriend from '../PendingFriend/PendingFriend';
 
 const UserDetailWindow = props => {
 
@@ -34,14 +36,12 @@ const UserDetailWindow = props => {
             return;
         }
         
-        
         const body = {
             profession: event.target.userDetailProfession.value || props.user.profession,
             hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
             imagesPath: event.target.userDetailImagesPath.value || null,
 
         }
-        console.log(body);
         updateUser(props.user._id, body)
     }
 
@@ -79,7 +79,7 @@ const UserDetailWindow = props => {
                                     </div>
                                 </div>
                                 <div id="updateAndError">
-                                    <button id="userDetailUpdateButton">Modificar datos</button>
+                                    <button id="userDetailUpdateButton">Actualizar datos</button>
                                     <span id="errorUserDetailUpdate">{errorUserDetailUpdate}</span>
                                 </div>
                             </form>
@@ -89,11 +89,11 @@ const UserDetailWindow = props => {
                     </div>
                 </div>
                 <div id="userDetailDown">
-                    <div id="userDetailPendingFriends">
-
+                    <div id="userDetailPendingFriends"> Invitaciones:
+                        {props.user?.pendingFriends.map(friend => <PendingFriend key={friend?._id} friend={friend} />)}
                     </div>
-                    <div id="userDetailFriends">
-                        
+                    <div id="userDetailFriends"> Amigos:
+                        {props.user?.friends.map(friend => <PendingFriend key={friend?._id} friend={friend} />)}    
                     </div>
                 </div>
             </div>    

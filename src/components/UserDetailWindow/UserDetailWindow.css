@@ -178,5 +178,10 @@ span{
 
 #userDetailDown{
     display: flex;
-    height: 32rem;
+    height: 31rem;
+    margin-top: 1rem;
+}
+
+#userDetailPendingFriends{
+    width: 50%;
 }

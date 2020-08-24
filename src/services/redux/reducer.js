@@ -1,10 +1,11 @@
-import { LOGIN, NEW_FRIENDS, UPDATE_USER } from './types/users.js'
+import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC } from './types/users.js'
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 const initialState = {
     user: {},
     messages: [],
-    newFriends: []
+    newFriends: [],
+    newFriendsDesc: []
 }
 
 function reducer(state = initialState, action){
@@ -29,6 +30,11 @@ function reducer(state = initialState, action){
                 ...state,
                 newFriends: action.payload
             }
+        case NEW_FRIENDS_DESC:
+        return {
+            ...state,
+            newFriendsDesc: action.payload
+        }
         case UPDATE_USER:
             return {
                 ...state,
