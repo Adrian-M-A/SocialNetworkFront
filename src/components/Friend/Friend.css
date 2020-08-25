@@ -1,7 +1,7 @@
 #friendContainer{
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 28%;
     margin-top: 0rem;
 }
 
@@ -40,6 +40,7 @@
 #friendImg{
     display: flex;
     height: 8rem;
+    cursor: pointer;
 }
 
 #userDataFriend {

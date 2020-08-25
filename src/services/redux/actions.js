@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from './store.js';
 import backURL from '../../config/api.js';
-import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC } from './types/users.js';
+import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC, GET_USER_DATA } from './types/users.js';
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 export const login = async(credentials) => {
@@ -23,6 +23,19 @@ export const logout = async(id) => {
         id:token
     });
     localStorage.removeItem('authToken');
+}
+
+export const getUserData = async(id) => {
+    const token = localStorage.getItem('authToken');
+    const res = await axios.get(backURL + 'users/data/' + id, {
+        headers: {
+            'authorization': token
+        }
+    });
+    store.dispatch({
+        type: GET_USER_DATA,
+        payload: res.data
+    });
 }
 
 export const getAllMessages = async() => {

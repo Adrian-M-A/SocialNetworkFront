@@ -12,7 +12,7 @@ const RecFriendsWindow = props => {
     let history = useHistory();
     const [friendsWindow, setFriendsWindow] = useState(true);
     const [searchedFriendsWindow, setSearchedFriendsWindow] = useState(false);
-    const [ageFriendsDescWindow, setAgeFriendsDescWindow] = useState(false);
+    const [ageFriendsDescWindow, setAgeFriendsDescWindow] = useState(false);    
     
     const getNewFriends = () => {
         const country = props.user.country;
@@ -49,7 +49,7 @@ const RecFriendsWindow = props => {
         if(!minAgeInput || !maxAgeInput){
             return;
         }
-        friendsByAge(minAgeInput, maxAgeInput, userId)
+        friendsByAge(minAgeInput, maxAgeInput, userId);
         friendsByAgeDesc(minAgeInput, maxAgeInput, userId);
         setFriendsWindow(false);
         setAgeFriendsDescWindow(false);
@@ -61,8 +61,7 @@ const RecFriendsWindow = props => {
                 
         setFriendsWindow(false);
         setSearchedFriendsWindow(false);
-        setAgeFriendsDescWindow(true)
-        
+        setAgeFriendsDescWindow(true);
     }
 
     return (

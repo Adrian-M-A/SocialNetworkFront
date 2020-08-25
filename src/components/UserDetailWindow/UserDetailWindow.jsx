@@ -37,16 +37,24 @@ const UserDetailWindow = props => {
             return;
         }
         if (event.target.userDetailImagesPath.value === ""){
-            return null;
-        }
         
-        const body = {
-            profession: event.target.userDetailProfession.value || props.user.profession,
-            hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
-            imagesPath: event.target.userDetailImagesPath.value,
+            const body = {
+                profession: event.target.userDetailProfession.value || props.user.profession,
+                hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
 
+            }
+
+            updateUser(props.user._id, body);
+
+        } else{
+            const body = {
+                profession: event.target.userDetailProfession.value || props.user.profession,
+                hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
+                imagesPath: event.target.userDetailImagesPath.value,
+
+            }
+            updateUser(props.user._id, body);
         }
-        updateUser(props.user._id, body)
     }
 
     return (

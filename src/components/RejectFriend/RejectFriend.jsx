@@ -13,7 +13,8 @@ const RejectFriend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        cancelFriendship(body);
+        cancelFriendship(body)
+
     }
 
     return (

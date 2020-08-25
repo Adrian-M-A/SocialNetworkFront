@@ -1,4 +1,4 @@
-import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC } from './types/users.js'
+import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC, GET_USER_DATA } from './types/users.js'
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
 
 const initialState = {
@@ -11,6 +11,11 @@ const initialState = {
 function reducer(state = initialState, action){
     switch(action.type){
         case LOGIN:
+            return {
+                ...state,
+                user: action.payload
+            }
+        case GET_USER_DATA:
             return {
                 ...state,
                 user: action.payload
