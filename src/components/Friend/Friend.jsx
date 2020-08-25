@@ -5,9 +5,12 @@ import './Friend.css';
 import { friendshipRequest } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 
-
 const Friend = (props) => {
-    
+
+    const friendDetail = () => {
+        console.log(props.friend);
+    }
+
     const friendhsipRequest = () => {
         const body = {
             requester: props.user?._id,
@@ -16,13 +19,12 @@ const Friend = (props) => {
         friendshipRequest(body);
     }
 
-
     return (
         <div id="friendContainer">
             <div id="friend">
                 <div id="friendHeader">
                     <div id="borderFriendImage">
-                        <img id="FriendImg" src={props.friend?.imagesPath[0]} alt="perfil" />
+                        <img id="friendImg" src={props.friend?.imagesPath[0]} alt="perfil" onClick={friendDetail} />
                     </div>
                     <div id="userDataFriend">
                         <h3 id="nameFriend">{props.friend?.name}</h3>

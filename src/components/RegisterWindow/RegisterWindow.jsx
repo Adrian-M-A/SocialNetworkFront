@@ -99,7 +99,7 @@ const RegisterWindow = props => {
 
         axios.post(API_URL + "users/register", body)
         .then(res => {
-            history.push('/public');
+            history.push('/');
         })
         .catch(error => {
             setErrorRegister('No ha sido posible registrarlo.');
@@ -111,7 +111,7 @@ const RegisterWindow = props => {
     }
 
     return(
-        <div id="registerContainer" value="registerContainer">
+        <div id="registerContainer">
             <div id="registerWindow">
                 <div id="registerHeader">
                     <div id="registerLogoImage">

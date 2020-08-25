@@ -19,6 +19,21 @@ const MessagesWindow = props => {
     const [publicWindow, setPublicWindow] = useState(true);
     const [searchWindow, setSearchWindow] = useState(false);
 
+    const goToFriends = () => {
+        history.push('/friends');
+        newFriends(props.user?.country, props.user?._id);
+    }
+
+    const allMessages = () => {
+        getAllMessages();
+        setSearchWindow(false);
+        setPublicWindow(true);
+    }
+
+    const goToUserDetail = () => {
+        history.push('/userdetail');
+    }
+    
     const searchMessages = (event) => {
         event.preventDefault();
         const searchInput =  event.target.searchMessage.value;
@@ -28,17 +43,6 @@ const MessagesWindow = props => {
         searchedMessages(searchInput);
         setPublicWindow(false);
         setSearchWindow(true);
-    }
-
-    const allMessages = () => {
-        getAllMessages();
-        setSearchWindow(false);
-        setPublicWindow(true);
-    }
-    
-    const goToFriends = () => {
-        history.push('/friends');
-        newFriends(props.user?.country);
     }
 
     const newMessage = (event) => {
@@ -63,6 +67,7 @@ const MessagesWindow = props => {
                 <div id="headerMessagesLeft">
                     <button id="friendsButton" type="submit" onClick={goToFriends}>Amigos</button>
                     <button id="buttonLastMessages" onClick={allMessages}>Mensajes</button>
+                    <button id="buttonUserDetail" onClick={goToUserDetail}>Perfil</button>
                 </div>
                 <form id="searchForm" onSubmit={searchMessages}>
                     <input id="searchInputMessages" type="text" name="searchMessage" placeholder="Buscar mensaje..."/>

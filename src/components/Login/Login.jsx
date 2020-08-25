@@ -14,7 +14,7 @@ const Login = (props) => {
         }
         login(credentials)
         .then(() => {
-            history.push('/public');
+            history.push('/main');
         }, 200)
 
         .catch(() => {
