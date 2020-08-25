@@ -4,12 +4,9 @@ import './UserDetail.css';
 
 import UserWindow from '../../components/UserWindow/UserWindow';
 import UserDetailWindow from '../../components/UserDetailWindow/UserDetailWindow';
-import { getUserData } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 
 const UserDetail = props => {
-
-    getUserData(props.user._id);
 
     return (
         <div id="userDetailContainer">
