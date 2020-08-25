@@ -22,6 +22,10 @@ const FriendDetailWindow = props => {
         history.push('/userdetail')
     }
 
+    const goBackToFriends = () => {
+        history.goBack();
+    }
+
     return (
         <div id="friendDetailWindow">
             <div id="headerFriendDetail">
@@ -55,6 +59,7 @@ const FriendDetailWindow = props => {
                             <div id="hobbyFriendDetail">Hobby: <span>{props.friendDetail?.hobbies[0]}</span></div>
                             <div id="cityFriendDetail">Ciudad: <span>{props.friendDetail?.city}</span></div>
                             <div id="countryFriendDetail">País: <span>{props.friendDetail?.country}</span></div>
+                            <button id="goBackToFriends" onClick={goBackToFriends}>Volver</button>
                         </div>
                     </div>
                 </div>
