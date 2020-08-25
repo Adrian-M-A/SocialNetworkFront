@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './UserDetailWindow.css';
 
-import { updateUser } from '../../services/redux/actions';
+import { updateUser, getUserData } from '../../services/redux/actions';
 import PendingFriend from '../PendingFriend/PendingFriend';
 import RejectFriend from '../RejectFriend/RejectFriend';
 
 const UserDetailWindow = props => {
+
+    useEffect(() => {
+        getUserData(props.user._id);
+    }, [props.user])
 
     let history = useHistory();
 
@@ -36,25 +40,32 @@ const UserDetailWindow = props => {
             setErrorUserDetailUpdate('Con esos datos no se puede actualizar.');
             return;
         }
-        if (event.target.userDetailImagesPath.value === ""){
         
-            const body = {
-                profession: event.target.userDetailProfession.value || props.user.profession,
-                hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
-
-            }
-
-            updateUser(props.user._id, body);
-
-        } else{
-            const body = {
-                profession: event.target.userDetailProfession.value || props.user.profession,
-                hobbies: event.target.userDetailHobbies.value || props.user.userDetailhobbies,
-                imagesPath: event.target.userDetailImagesPath.value,
-
-            }
-            updateUser(props.user._id, body);
+        let userProfession = event.target.userDetailProfession.value;
+        let userHobbies = event.target.userDetailHobbies.value;
+        let userImagesPath = event.target.userDetailImagesPath.value;
+        if (event.target.userDetailProfession.value === ""){
+            userProfession = props.user?.profession;
         }
+
+        if(event.target.userDetailHobbies.value === ""){
+             userHobbies = props.user?.hobbies[0];
+        }
+
+        if(event.target.userDetailImagesPath.value === ""){
+            userImagesPath = null;
+        }
+
+        const body = {
+            profession: userProfession,
+            hobbies: userHobbies,
+            imagesPath: userImagesPath,
+        }
+        
+        updateUser(props.user._id, body);
+        
+        document.getElementById("userDetailForm").reset();
+
     }
 
     return (

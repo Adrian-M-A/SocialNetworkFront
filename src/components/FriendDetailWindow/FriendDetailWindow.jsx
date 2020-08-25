@@ -21,6 +21,10 @@ const FriendDetailWindow = props => {
     const goToUserDetail = () => {
         history.push('/userdetail')
     }
+    
+    const backToFriends = () => {
+        history.goBack();
+    }
 
     const goBackToFriends = () => {
         history.goBack();
