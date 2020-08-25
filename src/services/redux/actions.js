@@ -3,6 +3,7 @@ import store from './store.js';
 import backURL from '../../config/api.js';
 import { LOGIN, NEW_FRIENDS, UPDATE_USER, NEW_FRIENDS_DESC, GET_USER_DATA } from './types/users.js';
 import { GET_PUBLIC_MESSAGES, SEARCHED_MESSAGES } from './types/messages.js';
+import { FRIEND_DETAIL } from './types/friend.js';
 
 export const login = async(credentials) => {
     const res = await axios.post(backURL + 'users/login', credentials);
@@ -181,4 +182,12 @@ export const cancelFriendship = async(body) => {
             'authorization': token
         }
     });
+}
+
+export const friendDetailData = async(friend) => {
+    
+    store.dispatch({
+        type: FRIEND_DETAIL,
+        payload: friend
+    })
 }

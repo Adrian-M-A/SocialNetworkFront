@@ -2,13 +2,17 @@ import React from 'react';
 
 import './Friend.css';
 
-import { friendshipRequest } from '../../services/redux/actions';
+import { friendshipRequest, friendDetailData } from '../../services/redux/actions';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const Friend = (props) => {
 
+    const history = useHistory();
+
     const friendDetail = () => {
-        console.log(props.friend);
+        friendDetailData(props.friend);
+        history.push('/frienddetail');
     }
 
     const friendhsipRequest = () => {

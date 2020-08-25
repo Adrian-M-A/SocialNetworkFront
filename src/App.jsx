@@ -8,6 +8,7 @@ import './App.css';
 import Landing from './containers/Landing/Landing.jsx';
 import Friends from './containers/Friends/Friends.jsx';
 import UserDetail from './containers/UserDetail/UserDetail.jsx';
+import FriendDetail from './containers/FriendDetail/FriendDetail.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/register' component={Register} exact />
           <Route path='/friends' component={Friends} exact />
           <Route path='/userdetail' component={UserDetail} exact />
+          <Route path='/frienddetail' component={FriendDetail} exact />
         </Switch>
       </Router>
     </div>
