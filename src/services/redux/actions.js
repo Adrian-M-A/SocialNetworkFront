@@ -191,3 +191,12 @@ export const friendDetailData = async(friend) => {
         payload: friend
     })
 }
+
+export const resetPassword = async(body) => {
+    const token = localStorage.getItem('authToken');
+    await axios.post(backURL + 'users/resetpassword', body, {
+        headers: {
+            'authorization': token
+        }
+    });
+}
