@@ -1,8 +1,7 @@
-#registerContainer{
+#registerWindowContainer{
     display: flex;
-    justify-content: center;
     opacity: 0.95;
-    
+    margin-top: 5rem;
 }
 
 #registerWindow {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ResetPassword.css';
 
-import logo from '../../img/logo.jpg'
+import logo from '../../img/logo.jpg';
 import { useHistory } from 'react-router-dom';
 import { resetPassword } from '../../services/redux/actions';
 

@@ -111,7 +111,7 @@ const RegisterWindow = props => {
     }
 
     return(
-        <div id="registerContainer">
+        <div id="registerWindowContainer">
             <div id="registerWindow">
                 <div id="registerHeader">
                     <div id="registerLogoImage">
