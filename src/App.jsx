@@ -9,18 +9,22 @@ import Landing from './containers/Landing/Landing.jsx';
 import Friends from './containers/Friends/Friends.jsx';
 import UserDetail from './containers/UserDetail/UserDetail.jsx';
 import FriendDetail from './containers/FriendDetail/FriendDetail.jsx';
+import ResetPassword from './containers/ResetPassword/ResetPassword.jsx';
+import NewPassword from './containers/NewPassword/NewPassword.jsx';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/' component={Landing} exact />
-          <Route path='/main' component={Main} exact />
-          <Route path='/register' component={Register} exact />
-          <Route path='/friends' component={Friends} exact />
-          <Route path='/userdetail' component={UserDetail} exact />
-          <Route path='/frienddetail' component={FriendDetail} exact />
+          <Route exact path='/' component={Landing}  />
+          <Route exact path='/main' component={Main}  />
+          <Route exact path='/register' component={Register}  />
+          <Route exact path='/friends' component={Friends}  />
+          <Route exact path='/userdetail' component={UserDetail}  />
+          <Route exact path='/frienddetail' component={FriendDetail} />
+          <Route exact path='/resetpassword' component={ResetPassword} />
+          <Route exact path='/newpassword/:token' component={NewPassword} />
         </Switch>
       </Router>
     </div>
