@@ -19,12 +19,10 @@ const RegisterPassword = (props) => {
             email: event.target.email.value
         };
 
-        setTimeout(() => {
-            history.push('/');
-        }, 500);
-
         resetPassword(body)
-        .then()
+        .then( () =>{
+            history.push('/');
+        })
         .catch(() => {
             setErrorResetPassword('Email no registrado.')
         })

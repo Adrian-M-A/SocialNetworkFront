@@ -200,3 +200,12 @@ export const resetPassword = async(body) => {
         }
     });
 }
+
+export const newPassword = async(URLtoken, body) => {
+    const token = localStorage.getItem('authToken');
+    await axios.put(backURL + 'users/newpassword/' + URLtoken, body, {
+        headers: {
+            'authorization': token
+        }
+    });
+}

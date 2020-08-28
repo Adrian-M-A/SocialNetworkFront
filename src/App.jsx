@@ -24,7 +24,7 @@ function App() {
           <Route exact path='/userdetail' component={UserDetail}  />
           <Route exact path='/frienddetail' component={FriendDetail} />
           <Route exact path='/resetpassword' component={ResetPassword} />
-          <Route exact path='/newpassword' component={NewPassword} />
+          <Route exact path='/newpassword/:token' component={NewPassword} />
         </Switch>
       </Router>
     </div>

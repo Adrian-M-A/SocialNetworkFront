@@ -6,6 +6,7 @@ import logo from '../../img/logo.jpg'
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import API_URL from '../../config/api';
+import { newPassword } from '../../services/redux/actions';
 
 const NewPassword = (props) => {
     
@@ -16,7 +17,7 @@ const NewPassword = (props) => {
     const [errorNewPassword, setErrornewPassword] = useState('');
 
     const handleSubmit = event => {
-
+        
         event.preventDefault();
 
         setErrorPassword('');
@@ -35,22 +36,31 @@ const NewPassword = (props) => {
         }   
             
         let body = {
-            password: event.target.password.value
+            newPassword: event.target.password.value
         };
 
-        axios.post(API_URL + "users/newPassword", body)
-        .then(res => {
-            history.push('/');
+        const token = props.match.params.token;
+
+        newPassword(token, body)
+        .then(() =>{
+
+            history.push('/')
         })
-        .catch(error => {
-            setErrornewPassword('No ha sido posible registrarlo.');
-        })
+        .catch((error) => {
+            console.error(error)
+            setErrornewPassword('No ha sido posible cambiar su contraseña.');
+
+        })        
     };
+
+    const landing = () => {
+        history.push('/');
+    }
 
     return (
         <div id="newPasswordContainer">
             <div id="logoNewPasswordTitle">
-                <img id="logoNewPassword" src={logo} alt="red social" />
+                <img id="logoNewPassword" src={logo} alt="red social" onClick={landing} />
                 <div id="titleSubtitleNewPassword">
                     <h1 id="newPasswordTitle">La red que siempre te acompaña.</h1>
                     <h3 id="newPasswordSubtitle">La única red social que te conecta con los más queridos por todos.</h3>
