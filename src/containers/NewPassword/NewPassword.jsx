@@ -4,8 +4,6 @@ import './NewPassword.css';
 
 import logo from '../../img/logo.jpg'
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import API_URL from '../../config/api';
 import { newPassword } from '../../services/redux/actions';
 
 const NewPassword = (props) => {
