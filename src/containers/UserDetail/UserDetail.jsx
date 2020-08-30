@@ -5,6 +5,7 @@ import './UserDetail.css';
 import UserWindow from '../../components/UserWindow/UserWindow';
 import UserDetailWindow from '../../components/UserDetailWindow/UserDetailWindow';
 import { connect } from 'react-redux';
+import ChatWindow from '../../components/ChatWindow/ChatWindow';
 
 const UserDetail = props => {
 
@@ -12,6 +13,7 @@ const UserDetail = props => {
         <div id="userDetailContainer">
             {localStorage.getItem('authToken') && <UserWindow />}
             {localStorage.getItem('authToken') && <UserDetailWindow />}
+            {localStorage.getItem('authToken') && <ChatWindow />}
         </div>
     )
 }
