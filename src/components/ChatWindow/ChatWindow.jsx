@@ -13,7 +13,8 @@ const ChatWindow = (props) => {
 
     const addMessage = (message) => {
         const messages = document.getElementById('chatMessages');
-        const div = document.createElement("div");
+        const div = document.createElement('div');
+        div.setAttribute("class", "chatMessage")
         div.innerHTML = message;
         messages.appendChild(div);
         window.scrollTo(0, document.body.scrollHeight);
@@ -28,7 +29,6 @@ const ChatWindow = (props) => {
     })
 
     socket.on('chat_message', function(data){
-        console.log(data)
         addMessage(data.userName + ": " + data.message)
     })
 
