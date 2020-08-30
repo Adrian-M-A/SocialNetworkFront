@@ -52,7 +52,7 @@ return (
         <h2 id="chatTitle">Chat</h2>
         <div id="chatMessages"></div>
         <form id="chatForm" action="submit" onSubmit={sendChatMessage}>
-            <textarea name="chatMessage" id="chatMessageArea" cols="30" rows="10"></textarea>
+            <input name="chatMessage" id="chatMessageArea" cols="30" rows="10"></input>
             <button id="chatMessageButton">Enviar</button>
         </form>
     </div>
