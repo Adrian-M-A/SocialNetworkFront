@@ -20,11 +20,12 @@ const Friend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        friendshipRequest(body);
-        getUserData(props.user._id);
-        setTimeout(() => {
+        friendshipRequest(body)
+        .then(() => {
             getUserData(props.user._id);
-        }, 500);
+
+        })
+        .catch(() => ({message: "There was an error trying to create the friendship request."}))
     }
 
     return (

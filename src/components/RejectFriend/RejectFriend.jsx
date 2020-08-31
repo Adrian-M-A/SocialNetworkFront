@@ -13,12 +13,12 @@ const RejectFriend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        cancelFriendship(body);
-        getUserData(props.user._id);
-        setTimeout(() => {
+        cancelFriendship(body)
+        .then(() =>{
             getUserData(props.user._id);
-        }, 500);
 
+        })
+        .catch(() => ({message: "There was an error trying to cancel friendship"}))
     }
 
     return (

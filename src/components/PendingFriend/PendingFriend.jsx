@@ -13,11 +13,12 @@ const PendingFriend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        acceptRequest(body);
-        getUserData(props.user._id);
-        setTimeout(() => {
+        acceptRequest(body)
+        .then(() =>{
             getUserData(props.user._id);
-        }, 500);
+
+        })
+        .catch(() => ({message: "There was an error trying to accept friendship request."}))
     }
 
     const rejectFriendhsipRequest = () => {
@@ -25,11 +26,11 @@ const PendingFriend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        rejectRequest(body);
-        getUserData(props.user._id);
-        setTimeout(() => {
+        rejectRequest(body)
+        .then(() =>{
             getUserData(props.user._id);
-        }, 500);
+        })
+        .catch(() => ({message: "There was an error trying to reject friendship request."}))
     }
 
     return (
