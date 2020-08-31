@@ -2,7 +2,7 @@ import React from 'react';
 
 import './RejectFriend.css';
 
-import { cancelFriendship } from '../../services/redux/actions';
+import { cancelFriendship, getUserData } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 
 
@@ -13,7 +13,11 @@ const RejectFriend = (props) => {
             requester: props.user?._id,
             receiver: props.friend?._id
         }
-        cancelFriendship(body)
+        cancelFriendship(body);
+        getUserData(props.user._id);
+        setTimeout(() => {
+            getUserData(props.user._id);
+        }, 500);
 
     }
 

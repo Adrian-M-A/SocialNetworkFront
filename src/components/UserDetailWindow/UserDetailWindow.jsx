@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './UserDetailWindow.css';
 
-import { updateUser, getUserData } from '../../services/redux/actions';
+import { updateUser } from '../../services/redux/actions';
 import PendingFriend from '../PendingFriend/PendingFriend';
 import RejectFriend from '../RejectFriend/RejectFriend';
 
 const UserDetailWindow = props => {
-
-    useEffect(() => {
-        getUserData(props.user._id);
-    }, [props.user])
 
     let history = useHistory();
 
