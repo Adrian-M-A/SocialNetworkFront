@@ -1,0 +1,228 @@
+#userDetailWindow {
+    display: flex;
+    flex-direction: column;
+    height: 57rem; 
+    width: 75.5em;
+    background-color: white;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    margin-top: 1rem; 
+}
+
+#headerUserDetail {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #fe83af;
+}
+
+#headerUserDetailLeft {
+    margin-left: 2rem;
+}
+
+#buttonLastMessages, #userDetailButton, #buttonUserDetail {
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #661fdf;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#buttonLastMessages:hover, #userDetailButton:hover, #buttonUserDetail:hover {
+    color: #09d8f8;
+}
+
+#userDetailUp {
+    display: flex;
+    height: 25rem;
+}
+
+#userDetailLeft{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+#userDetailImageBorder{
+    display:flex;
+    border: 0.1rem solid gray;
+    height: 13rem;
+    width: 13rem;
+    overflow: hidden;
+    border-radius: 15rem;
+    align-self: center;
+    justify-content: center;
+}
+
+#userDetailImg{
+    height: 18rem;
+    align-self: flex-start;
+}
+
+#nameUserDetail, #surnamesUserDetail{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    
+}
+
+#nameUserDetail{
+    margin-top: 1.5rem;
+}
+
+#surnamesUserDetail{
+    margin-top: 0.7rem;
+}
+
+#userImages {
+    display: flex;
+    height: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#userDetailSecondImageBorder, #userDetailThirdImageBorder{
+    display:flex;
+    border: 0.1rem solid gray;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    align-self: center;
+    justify-content: center;
+}
+
+#userDetailSecondImg, #userDetailThirdImg{
+    height: 4rem;
+    align-self: flex-start;
+}
+
+#userDetailRight{
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+}
+
+#userDetailData{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+    font-size: larger;
+}
+
+#userDetailForm {
+    display: flex;
+    text-align: start;
+    width: 50rem;
+}
+
+#ageUserDetail {
+    font-weight: bold;
+    margin-top: 2rem;
+    align-self: flex-start;
+    color: #5420af;
+}
+
+#professionUserDetail, #hobbyUserDetail, #imagePathUserDetail,
+#cityUserDetail, #countryUserDetail, #cityUserDetail, #countryUserDetail {
+    font-weight: bold;
+    margin-top: 1rem;
+    align-self: flex-start;
+    color: #5420af;
+}
+
+span{
+    color: rgb(80, 78, 78);
+    margin-left: 1rem;
+}
+
+#professionUserDetailInput, #hobbyUserDetailInput, #imagePathUserDetailInput{
+    margin-left: 2rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #661fdf;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#imagePathUserDetailInput{
+    width: 19rem;
+    overflow: auto;
+}
+
+#updateAndError{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+#userDetailUpdateButton{
+    border: none;
+    background-color: #ffb6d0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #9d78dd;
+    margin-left: 1rem;
+    height: 3rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#userDetailUpdateButton:hover{
+    color: #661fdf;
+}
+
+#errorUserDetailUpdate {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: small;
+}
+
+#userDetailDown{
+    display: flex;
+    height: 28rem;
+}
+
+#userDetailPendingFriends, #userDetailFriends{
+    width: 45%;
+    height: 22rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    font-weight: bold;
+    font-size: larger;
+    color: #5420af;
+}
+
+#listOfPendingFriends, #listOfFriends{
+    display: flex;
+    overflow: scroll;
+    border-top: 0.1rem solid #ffb6d0;
+    height: 22rem;
+}

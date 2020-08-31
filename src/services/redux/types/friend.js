@@ -1,0 +1,1 @@
+export const FRIEND_DETAIL = 'FRIEND_DETAIL';

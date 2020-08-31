@@ -1,0 +1,47 @@
+#registerContainer{
+    display: flex;
+    height: 58.8rem;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+   
+}
+
+#logoRegisterTitle{
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+    margin-top: -4rem;  
+}
+
+#logoRegister{
+    height: 7rem;
+}
+
+#titleSubtitleRegister{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#registerTitle{
+    display: flex;
+    align-self: center;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#registerSubtitle{
+    color: rgb(192, 190, 190);
+    margin-top: -0.5rem;
+}
+
+#registerMap{
+    display: flex;
+    height: 40rem;
+    width: 76rem;
+    align-self: center;
+    justify-self: flex-start;
+    background-image: url('../../img/1.png');
+    justify-content: center;
+}

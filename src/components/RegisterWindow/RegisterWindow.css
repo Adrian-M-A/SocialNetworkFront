@@ -1,0 +1,128 @@
+#registerWindowContainer{
+    display: flex;
+    opacity: 0.95;
+    margin-top: 5rem;
+}
+
+#registerWindow {
+    background-color: white;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    border-radius: 1rem;
+    width: 70rem;
+    height: 38rem;
+}
+
+#registerHeader{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 70rem;
+    height: 8rem;
+}
+
+#registerLogoImage{
+    display: flex; 
+    width: 8rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+#registerFormInputs{
+    display: flex;
+    justify-content: flex-start;
+    width: 70rem;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: row;    
+    width: 70rem;
+}
+
+#registerFormLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+}
+#registerFormRight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+    width: 50%;
+}
+
+#nameInput, #surnamesInput, #ageInput, #professionInput, #hobbiesInput, #cityInput, #countryInput,
+#emailInput, #password1Input, #password2Input{
+    display: flex;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #661fdf;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#hobbiesInput {
+    display: flex;
+    width: 31.6rem;
+}
+#hobbiesContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nameSurnames, #ageProfession, #cityCountry {
+    display: flex;
+    flex-direction: row;
+}
+
+::placeholder{
+    font-weight: bolder;
+}
+
+#registerH2{
+    color: #50bdce;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+#registerButtonRW{
+    background-color: #661fdf;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #ffb6d0;
+    margin-top: 2rem;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#registerButtonRW:hover{
+    color: #fe83af;
+}
+
+#errorName, #errorSurnames, #errorRegister, #errorAge, #errorProfession, #errorHobbies, #errorCity,
+#errorCountry, #errorEmail, #errorPassword, #errorPasswords {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    display: flex;
+    justify-content: center;
+}
+
+#errorRegister{
+    padding-top: 1rem;
+}

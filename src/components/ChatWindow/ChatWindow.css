@@ -1,0 +1,87 @@
+#chatContainer{
+    display: flex;
+    height: 30rem;
+    width: 20.7rem;
+    background-color: white;
+    margin-top: 10rem;
+    margin-left: 0.5rem;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.7rem black ;
+    flex-direction: column;
+}
+
+#chatTitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #661fdf;
+}
+
+#chatMessages{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 18rem;
+    align-self: center;
+    border: 0.1rem solid #fe83af;;
+    border-radius: 0.2rem;
+    align-items: flex-start;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    background-image: url('../../img/backChat.png')
+}
+
+#chatForm{
+    display: flex;
+    margin-top: 1rem;
+}
+
+#chatMessageArea{
+    display: flex;
+    height: 3rem;
+    width: 13rem;
+    overflow: scroll;
+    margin-left: 1rem;
+    align-self: center;
+    border: 0.2rem solid #661fdf;
+    border-radius: 0.2rem;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: scroll;
+}
+
+#chatMessageButton{
+    border: none;
+    background-color: #661fdf;
+    border-radius: 0.5rem;
+    height: 3rem;
+    align-self: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #ffb6d0;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    margin-left: 0.7rem;
+}
+
+#chatMessageButton:hover{
+    color: #fe83af;
+}
+
+.chatMessage{
+    display: flex;
+    font-weight: bold;
+    color: rgb(114, 115, 116);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0.3rem;
+    height: 1.5rem;
+    width: 16rem;
+    font-size: small;
+    border-radius: 0 0.2rem 0.2rem 0.2rem;
+    margin-left: 1.2rem;
+    overflow: auto;
+    background-color: white;
+}

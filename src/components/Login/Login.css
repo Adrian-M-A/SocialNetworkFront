@@ -1,0 +1,97 @@
+#loginContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#loginForm {
+    display: flex;
+}
+
+#loginInputs{
+    display: flex;
+    flex-direction: column;
+}
+
+#loginData{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#emailLabel, #passwordLabel{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    color:#661fdf;
+}
+
+#resetPasswordLanding {
+    outline: none;
+    font-size: small;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+#loginEmailInput, #loginPasswordInput{
+    margin-left: 10rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 0.2rem solid #661fdf;
+    border-radius: 0.2rem;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::placeholder{
+    font-weight: bolder;
+}
+
+#errorLogin{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    font-size: small;
+    height: 1rem;
+}
+
+#loginButton{
+    border: none;
+    background-color: #661fdf;
+    border-radius: 0.5rem;
+    height: 3rem;
+    align-self: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #ffb6d0;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#loginButton:hover{
+    color: #fe83af;
+}
+
+#registerButton{
+    border: none;
+    background-color: #ffb6d0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #9d78dd;
+    margin-left: 1rem;
+    height: 3rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#registerButton:hover{
+    color: #661fdf;
+}

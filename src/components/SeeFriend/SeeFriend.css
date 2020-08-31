@@ -1,0 +1,67 @@
+#seeFriendContainer{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-right: 2rem;
+}
+
+#seeFriend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 18rem;
+    width: 15rem;
+    border: 0.1rem solid gray;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem black;
+}
+
+#seeFriendHeader {
+    display: flex;
+    height: 15rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#borderSeeFriendImage{
+    display: flex;
+    border: 0.1rem solid gray;
+    border-radius: 15rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    height: 8rem;
+    width: 8rem;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#seeFriendImg{
+    display: flex;
+    height: 9rem;
+}
+
+#seeFriendData {
+    display: flex;
+    height: 6rem;
+    flex-direction: column;
+}
+
+#nameSeeFriend, #surnamesSeeFriend, #professionSeeFriend {
+    display:flex;
+    margin-left: 1rem;
+    align-self: center;
+    color:rgb(78, 78, 78);
+    font-size: large;
+}
+#surnamesSeeFriend, #professionSeeFriend {
+    margin-top: -1rem;
+}
+
+#professionSeeFriend {
+    display:flex;
+    margin-left: 1rem;
+    align-self: center;
+    color: gray;
+}
