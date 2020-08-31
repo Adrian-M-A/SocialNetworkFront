@@ -2,7 +2,7 @@ import React from 'react';
 
 import './PendingFriend.css';
 
-import { acceptRequest, rejectRequest } from '../../services/redux/actions';
+import { acceptRequest, rejectRequest, getUserData } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 
 
@@ -14,6 +14,10 @@ const PendingFriend = (props) => {
             receiver: props.friend?._id
         }
         acceptRequest(body);
+        getUserData(props.user._id);
+        setTimeout(() => {
+            getUserData(props.user._id);
+        }, 500);
     }
 
     const rejectFriendhsipRequest = () => {
@@ -22,6 +26,10 @@ const PendingFriend = (props) => {
             receiver: props.friend?._id
         }
         rejectRequest(body);
+        getUserData(props.user._id);
+        setTimeout(() => {
+            getUserData(props.user._id);
+        }, 500);
     }
 
     return (

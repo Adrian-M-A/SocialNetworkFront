@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Friend.css';
 
-import { friendshipRequest, friendDetailData } from '../../services/redux/actions';
+import { friendshipRequest, friendDetailData, getUserData } from '../../services/redux/actions';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -21,6 +21,10 @@ const Friend = (props) => {
             receiver: props.friend?._id
         }
         friendshipRequest(body);
+        getUserData(props.user._id);
+        setTimeout(() => {
+            getUserData(props.user._id);
+        }, 500);
     }
 
     return (
