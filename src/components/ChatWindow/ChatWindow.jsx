@@ -21,7 +21,6 @@ const ChatWindow = (props) => {
     }
 
     socket.on('user_join', function(data){
-        addMessage(data + " acaba de unirse a la sala.")
     })
 
     socket.on('user_leave', function(data){
