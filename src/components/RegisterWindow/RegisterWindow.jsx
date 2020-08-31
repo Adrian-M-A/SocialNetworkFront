@@ -94,7 +94,8 @@ const RegisterWindow = props => {
             city: event.target.city.value,
             country: event.target.country.value,
             email: event.target.email.value,
-            password: event.target.password.value
+            password: event.target.password.value,
+            imagesPath: "https://kooledge.com/assets/default_medium_avatar-57d58da4fc778fbd688dcbc4cbc47e14ac79839a9801187e42a796cbd6569847.png"
         };
 
         axios.post(API_URL + "users/register", body)
